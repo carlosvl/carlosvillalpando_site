@@ -1,5 +1,15 @@
 # Deployment Guide - Firebase Hosting
 
+## ⚠️ IMPORTANT: Accept Terms of Service First!
+
+Before running `firebase init`, you need to accept Google Cloud's Terms of Service:
+
+1. Go to https://console.firebase.google.com/
+2. Accept the Terms of Service when prompted
+3. Then continue with the steps below
+
+OR create the project manually in the Firebase Console first.
+
 ## Step 1: Install Firebase CLI (if not already installed)
 
 ```bash
