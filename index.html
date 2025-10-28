@@ -24,16 +24,21 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h2>Welcome to My Portfolio</h2>
-                <p>Building innovative solutions with modern web technologies</p>
-                <button class="cta-button">Get Started</button>
+                <h2>Carlos Villalpando</h2>
+                <p>Director of Net Zero Cloud and Non-Profit Cloud Customer Success at Salesforce.com</p>
+                <p style="font-size: 1rem; margin-top: 1rem;">15 years in the Salesforce ecosystem | Salesforce MVP Alumnus | Servant Leader | Team Builder</p>
+                <button class="cta-button">Connect With Me</button>
             </div>
         </section>
 
         <section id="about" class="about">
             <div class="container">
                 <h2>About Me</h2>
-                <p>Passionate developer with expertise in web development and software engineering.</p>
+                <p>I am an IT professional specializing in cloud strategy and architecture with over 15 years of experience delivering solutions in the Salesforce ecosystem. I have worked with small and medium-sized organizations and have served on Non-Profit boards to guide them through digital transformations.</p>
+                <p>Currently, I serve as the Director of Net Zero Cloud and Non-Profit Cloud Customer Success at Salesforce.com. I was part of the New Product Introduction team that launched Net Zero Cloud by shaping and starting all necessary processes to ensure customer adoption of the product. I engage with customers to ensure product adoption by providing best practices and awareness of new functionality, and I build and foster executive-level relationships with customer IT and business executive leadership, sponsors, and decision-makers.</p>
+                <p>I have 15 years of experience in the Salesforce ecosystem, hold 12 certifications, and am a Salesforce MVP alumnus. I actively participate in the UG community and was a founding member and leader of the Salesforce.org Prof Services organization. I played a crucial role in expanding the Advisory team, which now serves Public sector, Nonprofit, and Education institutions.</p>
+                <p>My Strength Finder's top qualities—Communication, Futuristic, Woo, Activator, and Strategic—reflect my natural inclination to tinker and innovate. As a servant leader, I ensure my teams have the resources they need for success and personal growth. I leverage my technology expertise to drive customer growth and transformation and dedicate significant time to community pro bono work (over 200 hours last year).</p>
+                <p>I am a proud father of two, husband, cyclist, runner, and dog lover.</p>
             </div>
         </section>
 
@@ -41,17 +46,11 @@
             <div class="container">
                 <h2>Projects</h2>
                 <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p>Description of project 1</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p>Description of project 2</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 3</h3>
-                        <p>Description of project 3</p>
+                    <div class="project-card" onclick="window.location.href='elcochinito.html'" style="cursor: pointer;">
+                        <h3>El Cochinito - iOS App</h3>
+                        <p>A comprehensive iOS app for tracking kids' money jars and allowances. Built with Swift, UIKit, and iCloud sync. Features include automatic allowance scheduling, multiple kids and money jars, and a clean, intuitive interface.</p>
+                        <p><strong>Technologies:</strong> Swift, UIKit, iCloud, Core Data</p>
+                        <p style="color: #667eea; margin-top: 1rem; font-weight: 600;">Learn More →</p>
                     </div>
                 </div>
             </div>
@@ -60,12 +59,34 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2>Contact Me</h2>
-                <form id="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                <form id="contact-form" action="https://formsubmit.co/carlos@carlosvillalpando.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
+                <script src="https://www.google.com/recaptcha/api.js?render=6LdNEvorAAAAALcKWOEGAz7u2UFr6cjki5346tQX"></script>
+                <script>
+                    const contactForm = document.getElementById('contact-form');
+                    if (contactForm) {
+                        contactForm.addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            grecaptcha.ready(function() {
+                                grecaptcha.execute('6LdNEvorAAAAALcKWOEGAz7u2UFr6cjki5346tQX', {action: 'submit'}).then(function(token) {
+                                    const recaptchaInput = document.createElement('input');
+                                    recaptchaInput.type = 'hidden';
+                                    recaptchaInput.name = 'g-recaptcha-response';
+                                    recaptchaInput.value = token;
+                                    contactForm.appendChild(recaptchaInput);
+                                    contactForm.submit();
+                                });
+                            });
+                        });
+                    }
+                </script>
             </div>
         </section>
     </main>

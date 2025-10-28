@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Cochinito - Carlos Villalpando</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            background: linear-gradient(135deg, #f8b500 0%, #fb8c00 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .project-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .project-header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+        .back-link {
+            text-align: center;
+            padding: 2rem 0;
+            background: #f8f9fa;
+        }
+        .back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        .project-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            color: #fb8c00;
+            margin-bottom: 1rem;
+        }
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .tech-stack h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .tech-stack ul {
+            list-style: none;
+            padding: 0;
+        }
+        .tech-stack li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .support-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .support-section h2 {
+            margin-bottom: 1rem;
+        }
+        .support-email {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+        .support-email a {
+            color: white;
+            text-decoration: underline;
+        }
+        .support-email a:hover {
+            text-decoration: none;
+        }
+        .app-features {
+            margin: 3rem 0;
+        }
+        .app-features h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-header">
+        <div class="container">
+            <h1>🐷 El Cochinito</h1>
+            <p>Your E-Piggy Bank for Teaching Kids About Money</p>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="index.html">← Back to Portfolio</a>
+    </div>
+
+    <div class="project-content">
+        <section>
+            <h2 style="color: #2c3e50; margin-bottom: 1.5rem;">Overview</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                El Cochinito is a comprehensive iOS application designed to help parents teach their children financial responsibility through virtual money jars and automated allowance tracking. The app (Spanish for "piggy bank") makes it fun and easy to manage allowances, track savings goals, and teach valuable money management skills.
+            </p>
+        </section>
+
+        <section class="app-features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>👨‍👩‍👧‍👦 Multiple Kids Support</h3>
+                    <p>Manage money jars for all your children in one convenient location. Each child gets their own profile with their name and age automatically tracked.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💰 Multiple Money Jars</h3>
+                    <p>Create unlimited money jars per child for different purposes: savings, spending, goals, charity, and more. Perfect for teaching kids about balanced financial planning.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📅 Automatic Allowance Schedules</h3>
+                    <p>Set it and forget it! Create recurring allowances with weekly, bi-weekly, or monthly schedules. Never forget allowance day again.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>➕ Easy Transactions</h3>
+                    <p>Quickly add or subtract money with simple taps. Track allowance payments, chore rewards, purchases, and expenses effortlessly.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>✏️ Full Editing Control</h3>
+                    <p>Edit kid names, ages, jar names, and schedules anytime. Everything stays flexible as your family and their goals evolve.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>☁️ iCloud Sync</h3>
+                    <p>Your data automatically syncs across all your Apple devices. Start on iPhone, continue on iPad—always up-to-date and backed up securely.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-stack">
+            <h3>Technical Stack</h3>
+            <ul>
+                <li><strong>Language:</strong> Swift</li>
+                <li><strong>UI Framework:</strong> UIKit with Storyboards</li>
+                <li><strong>Storage:</strong> JSON file-based persistence with iCloud Documents integration</li>
+                <li><strong>Design Pattern:</strong> MVC (Model-View-Controller)</li>
+                <li><strong>Cloud Services:</strong> iCloud Document Storage for seamless device synchronization</li>
+                <li><strong>Data Management:</strong> Core Data for local persistence</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: #2c3e50; margin-bottom: 1.5rem;">Architecture Highlights</h2>
+            <div class="feature-card" style="margin: 1.5rem 0;">
+                <h3>SimpleStorageManager</h3>
+                <p>A singleton class handling all data operations with JSON-based file storage, automatic migration to iCloud, and NSMetadataQuery for monitoring file changes.</p>
+            </div>
+            <div class="feature-card" style="margin: 1.5rem 0;">
+                <h3>Privacy-Focused Design</h3>
+                <p>No account required—your family's financial data stays private and secure on your devices and iCloud. No third-party tracking or analytics.</p>
+            </div>
+            <div class="feature-card" style="margin: 1.5rem 0;">
+                <h3>User Experience</h3>
+                <p>Clean, intuitive interface designed specifically for parents. Intuitive forms with date pickers and amount inputs, real-time iCloud sync notifications, and confirmation dialogs for important actions.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact" style="padding: 60px 0; background: white; margin-top: 40px;">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Have questions about El Cochinito or need support? I'm here to help!</p>
+                <form id="contact-form" action="https://formsubmit.co/carlos@carlosvillalpando.com" method="POST">
+                    <input type="hidden" name="_subject" value="El Cochinito Support Request">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <script src="https://www.google.com/recaptcha/api.js?render=6LdNEvorAAAAALcKWOEGAz7u2UFr6cjki5346tQX"></script>
+                <script>
+                    const contactForm = document.getElementById('contact-form');
+                    if (contactForm) {
+                        contactForm.addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            grecaptcha.ready(function() {
+                                grecaptcha.execute('6LdNEvorAAAAALcKWOEGAz7u2UFr6cjki5346tQX', {action: 'submit'}).then(function(token) {
+                                    const recaptchaInput = document.createElement('input');
+                                    recaptchaInput.type = 'hidden';
+                                    recaptchaInput.name = 'g-recaptcha-response';
+                                    recaptchaInput.value = token;
+                                    contactForm.appendChild(recaptchaInput);
+                                    contactForm.submit();
+                                });
+                            });
+                        });
+                    }
+                </script>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Carlos Villalpando. All rights reserved.</p>
+            <p><a href="https://www.linkedin.com/in/carlosvillalpando/" target="_blank" style="color: #3498db;">Connect on LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

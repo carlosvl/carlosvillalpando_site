@@ -26,7 +26,7 @@ carlosvillalpando_site/
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
+   git clone <repository-url>fi
    cd carlosvillalpando_site
    ```
 

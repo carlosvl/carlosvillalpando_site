@@ -12,28 +12,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handler
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const message = this.querySelector('textarea').value;
-        
-        // Here you would typically send the data to a server
-        console.log('Form submitted:', { name, email, message });
-        
-        // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
-        
-        // Reset form
-        this.reset();
-    });
-}
+// Button loading state handler (reCAPTCHA v3 handles the actual submit)
+const contactForms = document.querySelectorAll('#contact-form');
+contactForms.forEach(form => {
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton) {
+        form.addEventListener('submit', function(e) {
+            const originalText = submitButton.textContent;
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            // Re-enable button after a delay (in case of errors)
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }, 5000);
+        });
+    }
+});
 
 // CTA button handler
 const ctaButton = document.querySelector('.cta-button');
