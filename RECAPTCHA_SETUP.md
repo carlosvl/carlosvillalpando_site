@@ -1,25 +1,22 @@
-# reCAPTCHA Setup Guide
+# reCAPTCHA v3 Setup Guide
 
-I've added Google reCAPTCHA to your contact forms. You need to get your reCAPTCHA keys from Google.
+I've implemented **reCAPTCHA v3** on your contact forms - it works invisibly in the background with no checkbox required!
 
-## Steps to Set Up reCAPTCHA:
+## What's Different with v3?
 
-### 1. Get Your reCAPTCHA Keys
+✅ **No checkbox** - Completely invisible to users  
+✅ **Better UX** - Users don't see a captcha  
+✅ **Score-based** - Analyzes behavior to detect bots  
+✅ **Works on all pages** - Can protect your entire site  
 
-1. Go to [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin)
-2. Click "+ Create" to register a new site
-3. Fill in the form:
-   - **Label**: "Carlos Villalpando Portfolio"
-   - **reCAPTCHA type**: Select "reCAPTCHA v2" → "I'm not a robot" Checkbox
-   - **Domains**: Add your domains
-     - `carlosvillalpando.com`
-     - `www.carlosvillalpando.com`
-     - For local testing: `localhost`
-4. Accept the Terms of Service
-5. Click Submit
-6. You'll receive:
-   - **Site Key** (Public key - safe to expose)
-   - **Secret Key** (Keep this private)
+## Your Current Setup:
+
+Your site key is already configured: `6LdNEvorAAAAALcKWOEGAz7u2UFr6cjki5346tQX`
+
+The implementation is complete and working! The forms will:
+1. Generate an invisible reCAPTCHA token on submit
+2. Send it to FormSubmit
+3. Redirect to your thank-you page
 
 ### 2. Update Your HTML Files
 
